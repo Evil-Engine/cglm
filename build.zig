@@ -13,7 +13,6 @@ pub fn build(b: *std.Build) void {
     lib_mod.addCMacro("CGLM_STATIC", "1");
     lib_mod.addCMacro("CGLM_ALL_UNALIGNED", "1");
     lib_mod.addCSourceFiles(.{
-        .root = b.path("vendor/cglm"),
         .files = &[_][]const u8{
             "src/euler.c",
             "src/affine.c",
